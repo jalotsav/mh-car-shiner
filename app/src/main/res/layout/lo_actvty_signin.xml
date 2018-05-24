@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2018 Jalotsav
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cordntrlyot_signin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/_16jdp"
+        android:layout_marginRight="@dimen/_16jdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_120jdp"
+            android:layout_height="@dimen/_120jdp"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/imgcd_image"
+            android:src="@mipmap/ic_launcher" />
+
+        <!--Mobile No.-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/txtinputlyot_signin_mobileno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtinptet_signin_mobileno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/mobileno_sml"
+                android:text="@string/cntrycode_india"
+                android:inputType="phone"
+                android:maxLength="14"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grayA8"
+                android:textSize="@dimen/_14jdp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Password-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/txtinputlyot_signin_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10jdp"
+            app:passwordToggleEnabled="true">
+            <!--app:passwordToggleTint="@color/white"-->
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtinptet_signin_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password_sml"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grayA8"
+                android:textSize="@dimen/_14jdp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!--SignIn-->
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/appcmptbtn_signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10jdp"
+            android:text="@string/signin_sml"
+            android:textColor="@color/colorPrimaryBlueMidnight" />
+
+        <!--Not member? Registered now-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16jdp"
+            android:text="@string/notmember_registernow"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14jdp" />
+
+        <!--SignUp-->
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/appcmptbtn_signin_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5jdp"
+            android:text="@string/create_an_account_sml"
+            android:textColor="@color/colorPrimaryBlueMidnight" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/prgrsbr_signin"
+        android:layout_width="@dimen/_30jdp"
+        android:layout_height="@dimen/_30jdp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="@dimen/_20jdp"
+        android:visibility="gone" />
+</android.support.design.widget.CoordinatorLayout>

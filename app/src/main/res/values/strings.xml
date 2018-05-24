@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">MH Car Shiner</string>
+    <string name="imgcd_image">Content description of images</string>
+    <string name="no_intrnt_cnctn">No internet connection</string>
+    <string name="server_problem_sml">There are some server problem.</string>
+    <string name="internal_problem_sml">There are some internal problem.</string>
+    <string name="indevlpmnt_sml">In Development</string>
+    <string name="please_wait_3dots">Please wait&#8230;</string>
+
+    <!--Sign In-->
+    <string name="mobileno_sml">Mobile Number</string>
+    <string name="cntrycode_india">+91</string>
+    <string name="entr_mobile_sml">Enter mobile</string>
+    <string name="invalid_mobile">Invalid mobile number</string>
+    <string name="password_sml">Password</string>
+    <string name="entr_password_sml">Enter password</string>
+    <string name="password_6chars_long">Password must be 6 Characters long</string>
+    <string name="invalid_credentials">Invalid credentials</string>
+    <string name="signin_sml">Login</string>
+    <string name="notmember_registernow">Not yet member? Create free account!</string>
+    <string name="signup_sml">Signup</string>
+    <string name="create_an_account_sml">Create an account</string>
+    <string name="invalid_login_crdntls">Mobile and Password does not match.</string>
+
+    <!--Sign Up-->
+    <string name="firstname_sml">First name</string>
+    <string name="entr_firstname_sml">Enter first name</string>
+    <string name="lastname_sml">Last name</string>
+    <string name="entr_lastname_sml">Enter last name</string>
+    <string name="email_sml">Email</string>
+    <string name="entr_email_sml">Enter email</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="mobileno_exist">Mobile number already EXIST.</string>
+    <string name="mobileno_verfd_sucsfly">Mobile number verified successfully</string>
+    <string name="mobileno_not_verfd">Mobile number not verified</string>
+    <string name="exist_sml">exist</string>
+    <string name="sucsfly_regstr_sml">Successfully registration.</string>
+
+    <string name="city_sml">City</string>
+    <string name="entr_city_sml">Enter city</string>
+
+    <!-- Mobile Verification -->
+    <string name="verify_mobile_sml">Verify Mobile</string>
+    <string name="carrier_charges_apply">Jamnadas Connect will send a one time password to verify mobile number. Carrier SMS charges may apply.</string>
+    <string name="waiting_auto_detect_sms">Waiting to automatically detect an SMS sent</string>
+    <string name="resend_sml">Resend</string>
+    <string name="verfctn_code">Verification Code</string>
+    <string name="codesent_msg">Code has been sent to your mobile number.</string>
+    <string name="sending_sms_fail">Sending SMS failed, please try again.</string>
+    <string name="auto_detect_sms_fail">Auto detect SMS failed, please try again.</string>
+    <string name="entr_verfctn_code_if_fail_toautodetect">Enter the verification code below in case if we fail to detect the SMS automatically.</string>
+    <string name="entr_verfctn_code">Enter verification code</string>
+    <string name="invalid_verfctn_code">Invalid verification code</string>
+    <string name="submit_sml">Submit</string>
+    <string name="working_sms_plan">Please make sure you have a working SMS plan.\nSit back and relax. We\'ll notify you when we\'re done verifying.</string>
+    <string name="no_detect_any_mobileno">Not detected any mobile number</string>
+    <string name="allow_permtn_sms">To verify mobile number, you must have to allow SMS permission</string>
+</resources>
