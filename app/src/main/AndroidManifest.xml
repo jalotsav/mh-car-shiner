@@ -23,12 +23,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SignIn"
+            android:name=".ActvtySignIn"
             android:label="@string/signin_sml"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar.BGStyle" />
+            android:theme="@style/AppThemeDark.NoActionBar.BGStyle" />
         <activity
-            android:name=".SignUp"
+            android:name=".ActvtySignUp"
             android:label="@string/signup_sml"
             android:screenOrientation="portrait"
             android:theme="@style/MDTheme.BlueMdnghtBlue" />

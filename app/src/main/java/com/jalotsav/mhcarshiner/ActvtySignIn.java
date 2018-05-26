@@ -27,7 +27,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -49,9 +48,9 @@ import butterknife.OnClick;
  * Created by Jalotsav on 5/21/2017.
  */
 
-public class SignIn extends AppCompatActivity implements AppConstants {
+public class ActvtySignIn extends AppCompatActivity implements AppConstants {
 
-    private static final String TAG = SignIn.class.getSimpleName();
+    private static final String TAG = ActvtySignIn.class.getSimpleName();
 
     @BindView(R.id.cordntrlyot_signin) CoordinatorLayout mCrdntrlyot;
 
@@ -94,7 +93,7 @@ public class SignIn extends AppCompatActivity implements AppConstants {
                 break;
             case R.id.appcmptbtn_signin_signup:
 
-                startActivity(new Intent(this, SignUp.class));
+                startActivity(new Intent(this, ActvtySignUp.class));
                 break;
         }
     }
@@ -141,7 +140,7 @@ public class SignIn extends AppCompatActivity implements AppConstants {
                                     session.setEmail(objMdlUsers.getEmail());
 
                                     finish();
-                                    startActivity(new Intent(SignIn.this, NavgtnDrwrMain.class));
+                                    startActivity(new Intent(ActvtySignIn.this, NavgtnDrwrMain.class));
                                 } else
                                     Snackbar.make(mCrdntrlyot, mInvldCredentialsMsg, Snackbar.LENGTH_LONG).show();
                             } else

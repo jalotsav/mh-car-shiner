@@ -117,8 +117,9 @@
 
     <!--Use in App-->
     <color name="window_bg">#607D8B</color>
-    <color name="splash_grdntcenter">#078AC7</color>
-    <color name="grdntstart">#00ECD2</color>
-    <color name="grdntend">#00ADEA</color>
-    <color name="grdntcenter">#00CADF</color>
+    <color name="grdntstartend_bluedark">#0D5095</color>
+    <color name="grdntcenter_bluedark">#078AC7</color>
+    <color name="grdntstart_cyan">#00ECD2</color>
+    <color name="grdntend_cyan">#00ADEA</color>
+    <color name="grdntcenter_cyan">#00CADF</color>
 </resources>

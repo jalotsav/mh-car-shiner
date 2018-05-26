@@ -20,7 +20,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
-import com.jalotsav.mhcarshiner.SignIn;
+import com.jalotsav.mhcarshiner.ActvtySignIn;
 
 public class UserSessionManager implements AppConstants {
 
@@ -97,12 +97,12 @@ public class UserSessionManager implements AppConstants {
     // Get-Set Email to SharedPreferences
     public String getEmail() {
 
-        return pref.getString(CHILD_Email, "");
+        return pref.getString(CHILD_EMAIL, "");
     }
 
     public void setEmail(String email) {
 
-        editor.putString(CHILD_Email, email);
+        editor.putString(CHILD_EMAIL, email);
         editor.commit();
     }
 
@@ -115,7 +115,7 @@ public class UserSessionManager implements AppConstants {
 
         if (!this.isUserLoggedIn()) {
 
-            Intent i = new Intent(mContext, SignIn.class);
+            Intent i = new Intent(mContext, ActvtySignIn.class);
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             mContext.startActivity(i);
 //            ((Activity)_context).overridePendingTransition(0,0);
@@ -135,7 +135,7 @@ public class UserSessionManager implements AppConstants {
         editor.commit();
 
         // After logout redirect user to SignIn Activity
-        Intent i = new Intent(mContext, SignIn.class);
+        Intent i = new Intent(mContext, ActvtySignIn.class);
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         mContext.startActivity(i);
     }

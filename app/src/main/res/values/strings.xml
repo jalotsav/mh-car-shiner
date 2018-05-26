@@ -30,6 +30,7 @@
     <string name="email_sml">Email</string>
     <string name="entr_email_sml">Enter email</string>
     <string name="invalid_email">Invalid email</string>
+    <string name="email_exist">Email already EXIST.</string>
     <string name="mobileno_exist">Mobile number already EXIST.</string>
     <string name="mobileno_verfd_sucsfly">Mobile number verified successfully</string>
     <string name="mobileno_not_verfd">Mobile number not verified</string>

@@ -21,7 +21,7 @@ public class ActvtyMain extends AppCompatActivity {
             public void run() {
 
 //                int navDrwrPostn = getIntent().getIntExtra(AppConstants.PUT_EXTRA_NAVDRWER_POSTN, AppConstants.NAVDRWER_DASHBOARD);
-                startActivity(new Intent(ActvtyMain.this, SignIn.class));
+                startActivity(new Intent(ActvtyMain.this, ActvtySignIn.class));
 //                        .putExtra(AppConstants.PUT_EXTRA_NAVDRWER_POSTN, navDrwrPostn));
                 finish();
             }

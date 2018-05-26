@@ -24,7 +24,27 @@
 
     <!-- AppTheme Background & Button Style -->
     <style name="AppTheme.NoActionBar.BGStyle">
-        <item name="android:windowBackground">@color/splash_grdntcenter</item>
+        <item name="android:windowBackground">@drawable/drwbl_gradiant_bluedark</item>
+        <item name="colorButtonNormal">@color/colorPrimaryAmber</item>
+    </style>
+
+    <!-- AppTheme Dark -->
+    <style name="AppThemeDark" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/colorPrimaryOrange</item>
+    </style>
+
+    <!-- AppThemeDark NoActionBar -->
+    <style name="AppThemeDark.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- AppThemeDark Background & Button Style -->
+    <style name="AppThemeDark.NoActionBar.BGStyle">
+        <item name="android:windowBackground">@drawable/drwbl_gradiant_bluedark</item>
         <item name="colorButtonNormal">@color/colorPrimaryAmber</item>
     </style>
 

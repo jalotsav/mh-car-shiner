@@ -38,7 +38,7 @@ public interface AppConstants {
     String CHILD_UID = "uid";
     String CHILD_FIRST_NAME = "firstname";
     String CHILD_LAST_NAME = "lastname";
-    String CHILD_Email = "email";
+    String CHILD_EMAIL = "email";
     String CHILD_MOBILE = "mobile";
     String CHILD_PASSPHRASE = "passphrase";
     String CHILD_ISACTIVE = "isActive";

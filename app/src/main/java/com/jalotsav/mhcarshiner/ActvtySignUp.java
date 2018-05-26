@@ -18,6 +18,7 @@ package com.jalotsav.mhcarshiner;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
@@ -52,9 +53,9 @@ import butterknife.OnClick;
  * Created by Jalotsav on 5/21/2017.
  */
 
-public class SignUp extends AppCompatActivity implements AppConstants {
+public class ActvtySignUp extends AppCompatActivity implements AppConstants {
 
-    private static final String TAG = SignUp.class.getSimpleName();
+    private static final String TAG = ActvtySignUp.class.getSimpleName();
 
     @BindView(R.id.cordntrlyot_signup) CoordinatorLayout mCrdntrlyot;
 
@@ -78,6 +79,7 @@ public class SignUp extends AppCompatActivity implements AppConstants {
     @BindString(R.string.entr_firstname_sml) String mEntrFirstName;
     @BindString(R.string.entr_lastname_sml) String mEntrLastName;
     @BindString(R.string.entr_email_sml) String mEntrEmail;
+    @BindString(R.string.email_exist) String mEmailExistMsg;
     @BindString(R.string.mobileno_exist) String mMobileExistMsg;
     @BindString(R.string.mobileno_verfd_sucsfly) String mMobileVerifedMsg;
     @BindString(R.string.mobileno_not_verfd) String mMobileNotVerifiedMsg;
@@ -149,7 +151,35 @@ public class SignUp extends AppCompatActivity implements AppConstants {
         if (!ValidationUtils.validatePassword(this, mTxtinptlyotPaswrd, mTxtinptEtPaswrd)) // Password
             return;
 
-        checkMobileExist();
+        checkEmailExist();
+    }
+
+    // Check for Email is already exist in our Firebase Database
+    private void checkEmailExist() {
+
+        mPrgrsbrMain.setVisibility(View.VISIBLE);
+        mEmailVal = mTxtinptEtEmail.getText().toString().trim();
+        // Check Email is Exist in database
+        mUsersRef.orderByChild(CHILD_EMAIL).equalTo(mEmailVal)
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                        mPrgrsbrMain.setVisibility(View.GONE);
+                        if(dataSnapshot.exists())
+                            Snackbar.make(mCrdntrlyot, mEmailExistMsg, Snackbar.LENGTH_LONG).show();
+                        else
+                            checkMobileExist();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        Log.e(TAG, "checkEmailExist - onCancelled: " + databaseError.getMessage());
+                        mPrgrsbrMain.setVisibility(View.GONE);
+                        Snackbar.make(mCrdntrlyot, mServerPrblmMsg, Snackbar.LENGTH_LONG).show();
+                    }
+                });
     }
 
     // Check for Mobile number is already exist in our Firebase Database
@@ -170,7 +200,7 @@ public class SignUp extends AppCompatActivity implements AppConstants {
 
                             if(!isMobileVerified) {
 
-                                Intent intntVerifyMobileNo = new Intent(SignUp.this, VerifyMobileNo.class);
+                                Intent intntVerifyMobileNo = new Intent(ActvtySignUp.this, VerifyMobileNo.class);
                                 intntVerifyMobileNo.putExtra(AppConstants.CHILD_MOBILE, mTxtinptEtMobile.getText().toString().trim());
                                 startActivityForResult(intntVerifyMobileNo, AppConstants.REQUEST_VERFCTN_MOBILENO);
                             } else
@@ -209,9 +239,9 @@ public class SignUp extends AppCompatActivity implements AppConstants {
         session.setMobile(mMobileVal);
         session.setEmail(mEmailVal);
 
-        Toast.makeText(SignUp.this, mSucsflyRegstrnMsg, Toast.LENGTH_SHORT).show();
+        Toast.makeText(ActvtySignUp.this, mSucsflyRegstrnMsg, Toast.LENGTH_SHORT).show();
         finish();
-        startActivity(new Intent(SignUp.this, NavgtnDrwrMain.class));
+        startActivity(new Intent(ActvtySignUp.this, NavgtnDrwrMain.class));
     }
 
     @Override
