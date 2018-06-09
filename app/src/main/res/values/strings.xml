@@ -7,6 +7,9 @@
     <string name="indevlpmnt_sml">In Development</string>
     <string name="please_wait_3dots">Please wait&#8230;</string>
 
+    <!--Splash-->
+    <string name="make_your_carshine_everyday">Make your car shine everyday</string>
+
     <!--Sign In-->
     <string name="mobileno_sml">Mobile Number</string>
     <string name="cntrycode_india">+91</string>
@@ -21,6 +24,8 @@
     <string name="signup_sml">Signup</string>
     <string name="create_an_account_sml">Create an account</string>
     <string name="invalid_login_crdntls">Mobile and Password does not match.</string>
+    <string name="access_denied_sml">Access Denied</string>
+    <string name="access_denied_msg">You have no longer access to use this application. Please contact an administrator.</string>
 
     <!--Sign Up-->
     <string name="firstname_sml">First name</string>

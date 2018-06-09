@@ -16,6 +16,7 @@
 
 package com.jalotsav.mhcarshiner;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -23,6 +24,7 @@ import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -64,6 +66,8 @@ public class ActvtySignIn extends AppCompatActivity implements AppConstants {
     @BindString(R.string.server_problem_sml) String mServerPrblmMsg;
     @BindString(R.string.internal_problem_sml) String mInternalPrblmMsg;
     @BindString(R.string.invalid_login_crdntls) String mInvldCredentialsMsg;
+    @BindString(R.string.access_denied_sml) String mAccessDeniedTitle;
+    @BindString(R.string.access_denied_msg) String mAccessDeniedMsg;
 
     UserSessionManager session;
     FirebaseDatabase mDatabase;
@@ -129,22 +133,29 @@ public class ActvtySignIn extends AppCompatActivity implements AppConstants {
 
                         mPrgrsbrMain.setVisibility(View.GONE);
                         if(dataSnapshot.exists()) {
-                            MdlUsers objMdlUsers = dataSnapshot.child(session.getUserId()).getValue(MdlUsers.class);
-                            if (objMdlUsers != null) {
-                                if (objMdlUsers.getPassphrase().equals(passwordVal)) {
 
-                                    session.setUserId(objMdlUsers.getuId());
-                                    session.setFirstName(objMdlUsers.getFirstname());
-                                    session.setLastName(objMdlUsers.getLastname());
-                                    session.setMobile(objMdlUsers.getMobile());
-                                    session.setEmail(objMdlUsers.getEmail());
+                            for(DataSnapshot usersSnapshot: dataSnapshot.getChildren()) {
 
-                                    finish();
-                                    startActivity(new Intent(ActvtySignIn.this, NavgtnDrwrMain.class));
+                                MdlUsers objMdlUsers = usersSnapshot.getValue(MdlUsers.class);
+                                if (objMdlUsers != null) {
+                                    if(objMdlUsers.isActive()) {
+                                        if (objMdlUsers.getPassphrase().equals(passwordVal)) {
+
+                                            session.setUserId(objMdlUsers.getuId());
+                                            session.setFirstName(objMdlUsers.getFirstname());
+                                            session.setLastName(objMdlUsers.getLastname());
+                                            session.setMobile(objMdlUsers.getMobile());
+                                            session.setEmail(objMdlUsers.getEmail());
+
+                                            startActivity(new Intent(ActvtySignIn.this, ActvtyMain.class));
+                                            finish();
+                                        } else
+                                            Snackbar.make(mCrdntrlyot, mInvldCredentialsMsg, Snackbar.LENGTH_LONG).show();
+                                    } else
+                                        accessDeniedAlertDialog();
                                 } else
-                                    Snackbar.make(mCrdntrlyot, mInvldCredentialsMsg, Snackbar.LENGTH_LONG).show();
-                            } else
-                                Snackbar.make(mCrdntrlyot, mServerPrblmMsg, Snackbar.LENGTH_LONG).show();
+                                    Snackbar.make(mCrdntrlyot, mServerPrblmMsg, Snackbar.LENGTH_LONG).show();
+                            }
                         } else
                             Snackbar.make(mCrdntrlyot, mInvldCredentialsMsg, Snackbar.LENGTH_LONG).show();
                     }
@@ -157,5 +168,22 @@ public class ActvtySignIn extends AppCompatActivity implements AppConstants {
                         Snackbar.make(mCrdntrlyot, mServerPrblmMsg, Snackbar.LENGTH_LONG).show();
                     }
                 });
+    }
+
+    // Show AlertDialog for Access Denied
+    private void accessDeniedAlertDialog() {
+
+        AlertDialog.Builder alrtDlg = new AlertDialog.Builder(this, R.style.MDTheme_Light_Dialog);
+        alrtDlg.setTitle(mAccessDeniedTitle);
+        alrtDlg.setMessage(mAccessDeniedMsg);
+        alrtDlg.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                dialogInterface.dismiss();
+            }
+        });
+
+        alrtDlg.show();
     }
 }

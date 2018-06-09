@@ -231,7 +231,7 @@ public class ActvtySignUp extends AppCompatActivity implements AppConstants {
 
         DatabaseReference newUsersRef = mUsersRef.child(mPhoneAuthUid);
         newUsersRef.setValue(
-                new MdlUsers(mPhoneAuthUid, mFirstNameVal, mLastNameVal, mEmailVal, mMobileVal, mPasswordVal, true));
+                new MdlUsers(mPhoneAuthUid, mFirstNameVal, mLastNameVal, mEmailVal, mMobileVal, mPasswordVal, DEVICE_TYPE_ANDROID, true));
 
         session.setUserId(mPhoneAuthUid);
         session.setFirstName(mFirstNameVal);
@@ -241,7 +241,7 @@ public class ActvtySignUp extends AppCompatActivity implements AppConstants {
 
         Toast.makeText(ActvtySignUp.this, mSucsflyRegstrnMsg, Toast.LENGTH_SHORT).show();
         finish();
-        startActivity(new Intent(ActvtySignUp.this, NavgtnDrwrMain.class));
+        startActivity(new Intent(ActvtySignUp.this, ActvtyMain.class));
     }
 
     @Override

@@ -16,25 +16,31 @@
 
 package com.jalotsav.mhcarshiner;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.TextView;
 
-import com.jalotsav.mhcarshiner.common.UserSessionManager;
+/**
+ * Created by Jalotsav on 5/21/2017.
+ */
 
-public class NavgtnDrwrMain extends AppCompatActivity {
-
-    UserSessionManager session;
+public class ActvtySplash extends AppCompatActivity {
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.lo_actvty_nvgtndrwr_main);
+        setContentView(R.layout.lo_actvty_splash);
 
-        session = new UserSessionManager(this);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
 
-        TextView tvName = findViewById(R.id.tv_actvty_nvgtndrwr_main_name);
-        tvName.setText(session.getFirstName().concat(" ").concat(session.getLastName()));
+//                int navDrwrPostn = getIntent().getIntExtra(AppConstants.PUT_EXTRA_NAVDRWER_POSTN, AppConstants.NAVDRWER_DASHBOARD);
+                startActivity(new Intent(ActvtySplash.this, ActvtySignIn.class));
+//                        .putExtra(AppConstants.PUT_EXTRA_NAVDRWER_POSTN, navDrwrPostn));
+                finish();
+            }
+        }, 3000);
     }
 }

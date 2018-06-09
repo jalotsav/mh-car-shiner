@@ -30,27 +30,45 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="@dimen/_120jdp"
-            android:layout_height="@dimen/_120jdp"
-            android:layout_gravity="center_horizontal"
-            android:contentDescription="@string/imgcd_image"
-            android:src="@mipmap/ic_launcher" />
+        <!--Logo-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_130jdp"
+                android:layout_height="@dimen/_130jdp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/imgcd_image"
+                android:src="@drawable/ic_logo_round_castshadow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5jdp"
+                android:text="@string/app_name"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18jdp" />
+        </LinearLayout>
 
         <!--Mobile No.-->
         <android.support.design.widget.TextInputLayout
             android:id="@+id/txtinputlyot_signin_mobileno"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24jdp">
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/txtinptet_signin_mobileno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/mobileno_sml"
-                android:text="@string/cntrycode_india"
                 android:inputType="phone"
                 android:maxLength="14"
+                android:text="@string/cntrycode_india"
                 android:textColor="@color/white"
                 android:textColorHint="@color/grayA8"
                 android:textSize="@dimen/_14jdp" />
@@ -106,9 +124,10 @@
 
     <ProgressBar
         android:id="@+id/prgrsbr_signin"
-        android:layout_width="@dimen/_30jdp"
-        android:layout_height="@dimen/_30jdp"
-        android:layout_gravity="center|bottom"
-        android:layout_marginBottom="@dimen/_20jdp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:indeterminate="true"
         android:visibility="gone" />
 </android.support.design.widget.CoordinatorLayout>

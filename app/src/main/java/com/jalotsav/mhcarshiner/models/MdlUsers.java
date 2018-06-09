@@ -25,20 +25,21 @@ import com.google.firebase.database.IgnoreExtraProperties;
 @IgnoreExtraProperties
 public class MdlUsers {
 
-    private String uId, firstname, lastname, email, mobile, passphrase;
-    private boolean isActive;
+    private String uId, firstname, lastname, email, mobile, passphrase, deviceType;
+    private boolean active;
 
     public MdlUsers() {
     }
 
-    public MdlUsers(String uId, String firstname, String lastname, String email, String mobile, String passphrase, boolean isActive) {
+    public MdlUsers(String uId, String firstname, String lastname, String email, String mobile, String passphrase, String deviceType, boolean active) {
         this.uId = uId;
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
         this.mobile = mobile;
         this.passphrase = passphrase;
-        this.isActive = isActive;
+        this.deviceType = deviceType;
+        this.active = active;
     }
 
     public String getuId() {
@@ -65,7 +66,11 @@ public class MdlUsers {
         return passphrase;
     }
 
+    public String getDeviceType() {
+        return deviceType;
+    }
+
     public boolean isActive() {
-        return isActive;
+        return active;
     }
 }

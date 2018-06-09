@@ -42,19 +42,35 @@
                 android:paddingBottom="@dimen/_5jdp"
                 android:paddingTop="@dimen/_5jdp">
 
-                <ImageView
-                    android:layout_width="@dimen/_80jdp"
-                    android:layout_height="@dimen/_80jdp"
-                    android:layout_gravity="center_horizontal"
-                    android:contentDescription="@string/imgcd_image"
-                    android:src="@mipmap/ic_launcher" />
+                <!--Logo-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_100jdp"
+                        android:layout_height="@dimen/_100jdp"
+                        android:layout_gravity="center_horizontal"
+                        android:contentDescription="@string/imgcd_image"
+                        android:src="@drawable/ic_logo_round_castshadow" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimaryBlueMidnight"
+                        android:textSize="@dimen/_18jdp" />
+                </LinearLayout>
 
                 <!--First Name-->
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/txtinputlyot_signup_firstname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5jdp">
+                    android:layout_marginTop="@dimen/_10jdp">
 
                     <android.support.design.widget.TextInputEditText
                         android:id="@+id/txtinptet_signup_firstname"

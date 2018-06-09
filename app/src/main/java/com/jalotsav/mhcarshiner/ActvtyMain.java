@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 /**
- * Created by Jalotsav on 5/21/2017.
+ * Created by Jalotsav on 6/9/2017.
  */
 
 public class ActvtyMain extends AppCompatActivity {
@@ -16,15 +16,5 @@ public class ActvtyMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lo_actvty_main);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-
-//                int navDrwrPostn = getIntent().getIntExtra(AppConstants.PUT_EXTRA_NAVDRWER_POSTN, AppConstants.NAVDRWER_DASHBOARD);
-                startActivity(new Intent(ActvtyMain.this, ActvtySignIn.class));
-//                        .putExtra(AppConstants.PUT_EXTRA_NAVDRWER_POSTN, navDrwrPostn));
-                finish();
-            }
-        }, 3000);
     }
 }

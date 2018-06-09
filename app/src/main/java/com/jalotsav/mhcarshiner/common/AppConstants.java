@@ -52,4 +52,7 @@ public interface AppConstants {
     // Request Keys
     int REQUEST_VERFCTN_MOBILENO = 101;
     int REQUEST_APP_PERMISSION = 102;
+
+    // Others
+    String DEVICE_TYPE_ANDROID = "Android";
 }

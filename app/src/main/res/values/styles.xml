@@ -75,4 +75,7 @@
         <item name="android:textSize">@dimen/_14jdp</item>
     </style>
 
+    <!--Material Design Theme Light Dialog-->
+    <style name="MDTheme.Light.Dialog" parent="Theme.AppCompat.Light.Dialog" />
+
 </resources>
