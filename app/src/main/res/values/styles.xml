@@ -28,6 +28,16 @@
         <item name="colorButtonNormal">@color/colorPrimaryAmber</item>
     </style>
 
+    <!-- AppTheme Navigation NoActionBar Style -->
+    <style name="AppTheme.NavigationNoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+    <style name="AppTheme.AppBarOverlayLight" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.AppBarOverlayActionBar" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <!-- AppTheme Dark -->
     <style name="AppThemeDark" parent="Theme.AppCompat">
         <item name="colorPrimary">@color/colorPrimary</item>

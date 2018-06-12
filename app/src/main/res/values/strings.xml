@@ -61,4 +61,21 @@
     <string name="working_sms_plan">Please make sure you have a working SMS plan.\nSit back and relax. We\'ll notify you when we\'re done verifying.</string>
     <string name="no_detect_any_mobileno">Not detected any mobile number</string>
     <string name="allow_permtn_sms">To verify mobile number, you must have to allow SMS permission</string>
+
+    <!--Navigation View-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="home_sml">Home</string>
+    <string name="myorder_sml">My Order</string>
+    <string name="aboutus_sml">About Us</string>
+    <string name="contactus_sml">Contact Us</string>
+    <string name="shareapp_sml">Share the App</string>
+    <string name="ratereview_sml">Rate &amp; Review</string>
+    <string name="account_sml">Account</string>
+    <string name="profile_sml">Profile</string>
+    <string name="logout_sml">Logout</string>
+
+    <!--Logout-->
+    <string name="logout_alrtdlg_msg">Do you want to logout?</string>
+    <string name="no_sml">No</string>
 </resources>

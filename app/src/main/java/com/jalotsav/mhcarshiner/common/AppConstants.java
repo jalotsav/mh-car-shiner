@@ -23,14 +23,7 @@ package com.jalotsav.mhcarshiner.common;
 public interface AppConstants {
 
     // Build Type
-    String DEBUG_BUILD_TYPE = "debug";
-
-    // Log Type
-    int LOGTYPE_VERBOSE = 1;
-    int LOGTYPE_DEBUG = 2;
-    int LOGTYPE_INFO = 3;
-    int LOGTYPE_WARN = 4;
-    int LOGTYPE_ERROR = 5;
+    String BUILD_TYPE_DEBUG = "debug";
 
     // FireDB Object
     String ROOT_NAME = "mhcarshinerApp";
@@ -40,14 +33,14 @@ public interface AppConstants {
     String CHILD_LAST_NAME = "lastname";
     String CHILD_EMAIL = "email";
     String CHILD_MOBILE = "mobile";
-    String CHILD_PASSPHRASE = "passphrase";
-    String CHILD_ISACTIVE = "isActive";
 
     // PutExtra Keys
     String PUT_EXTRA_COME_FROM = "comeFrom";
+    String PUT_EXTRA_NVGTNVW_POSTN = "nvgtnvwPosition";
 
-    // Navigation Drawer MenuItem position check for direct open that fragment
-    int NAVDRWER_DASHBOARD = 21;
+    // NavigationView Drawer MenuItem position check for direct open that fragment
+    int NVGTNVW_HOME = 21;
+    int NVGTNVW_MYORDER = 22;
 
     // Request Keys
     int REQUEST_VERFCTN_MOBILENO = 101;

@@ -32,6 +32,8 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -106,7 +108,7 @@ public class ActvtySignUp extends AppCompatActivity implements AppConstants {
 
         session = new UserSessionManager(this);
         mFireAuth = FirebaseAuth.getInstance();
-//
+
         // Firebase Database Initialization and References
         mDatabase = FirebaseDatabase.getInstance();
         mRootRef = mDatabase.getReference().child(ROOT_NAME);
@@ -231,17 +233,33 @@ public class ActvtySignUp extends AppCompatActivity implements AppConstants {
 
         DatabaseReference newUsersRef = mUsersRef.child(mPhoneAuthUid);
         newUsersRef.setValue(
-                new MdlUsers(mPhoneAuthUid, mFirstNameVal, mLastNameVal, mEmailVal, mMobileVal, mPasswordVal, DEVICE_TYPE_ANDROID, true));
+                new MdlUsers(mPhoneAuthUid, mFirstNameVal, mLastNameVal, mEmailVal, mMobileVal, mPasswordVal,
+                        DEVICE_TYPE_ANDROID, true))
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
 
-        session.setUserId(mPhoneAuthUid);
-        session.setFirstName(mFirstNameVal);
-        session.setLastName(mLastNameVal);
-        session.setMobile(mMobileVal);
-        session.setEmail(mEmailVal);
+                        Log.i(TAG, "onSuccess: writeNewUser - data successfully inserted.");
 
-        Toast.makeText(ActvtySignUp.this, mSucsflyRegstrnMsg, Toast.LENGTH_SHORT).show();
-        finish();
-        startActivity(new Intent(ActvtySignUp.this, ActvtyMain.class));
+                        session.setUserId(mPhoneAuthUid);
+                        session.setFirstName(mFirstNameVal);
+                        session.setLastName(mLastNameVal);
+                        session.setMobile(mMobileVal);
+                        session.setEmail(mEmailVal);
+
+                        Toast.makeText(ActvtySignUp.this, mSucsflyRegstrnMsg, Toast.LENGTH_SHORT).show();
+                        finish();
+                        startActivity(new Intent(ActvtySignUp.this, ActvtyMain.class));
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+
+                        Log.e(TAG, "onFailure: writeNewUser - " + e.getMessage());
+                        Snackbar.make(mCrdntrlyot, mServerPrblmMsg, Snackbar.LENGTH_LONG).show();
+                    }
+                });
     }
 
     @Override

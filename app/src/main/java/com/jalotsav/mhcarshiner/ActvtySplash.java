@@ -21,6 +21,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
+import com.jalotsav.mhcarshiner.common.AppConstants;
+
 /**
  * Created by Jalotsav on 5/21/2017.
  */
@@ -36,9 +38,9 @@ public class ActvtySplash extends AppCompatActivity {
             @Override
             public void run() {
 
-//                int navDrwrPostn = getIntent().getIntExtra(AppConstants.PUT_EXTRA_NAVDRWER_POSTN, AppConstants.NAVDRWER_DASHBOARD);
-                startActivity(new Intent(ActvtySplash.this, ActvtySignIn.class));
-//                        .putExtra(AppConstants.PUT_EXTRA_NAVDRWER_POSTN, navDrwrPostn));
+                int navgtnPosition = getIntent().getIntExtra(AppConstants.PUT_EXTRA_NVGTNVW_POSTN, AppConstants.NVGTNVW_HOME);
+                startActivity(new Intent(ActvtySplash.this, ActvtyMain.class)
+                        .putExtra(AppConstants.PUT_EXTRA_NVGTNVW_POSTN, navgtnPosition));
                 finish();
             }
         }, 3000);
