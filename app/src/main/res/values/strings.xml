@@ -75,6 +75,9 @@
     <string name="profile_sml">Profile</string>
     <string name="logout_sml">Logout</string>
 
+    <!--Profile-->
+    <string name="mobile_sml">Mobile</string>
+
     <!--Logout-->
     <string name="logout_alrtdlg_msg">Do you want to logout?</string>
     <string name="no_sml">No</string>

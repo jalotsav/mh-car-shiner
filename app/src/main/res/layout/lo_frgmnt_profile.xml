@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2018 Jalotsav
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cordntrlyot_frgmnt_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180jdp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grayE8"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_frgmnt_profile_firstcharname"
+                    android:layout_width="@dimen/_100jdp"
+                    android:layout_height="@dimen/_100jdp"
+                    android:background="@drawable/drwbl_bg_clrprmry_round_bordr_white"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/whiteTrsprnt80"
+                    android:textSize="@dimen/_56jdp"
+                    tools:text="S" />
+            </LinearLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_frgmnt_profile_fullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_16jdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_22jdp"
+                tools:text="Jaldeep Asodariya" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1jdp"
+                android:background="@color/grayE8" />
+
+            <!--START Mobile-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_10jdp"
+                android:paddingTop="@dimen/_16jdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20jdp"
+                    android:layout_height="@dimen/_20jdp"
+                    android:layout_marginLeft="@dimen/_16jdp"
+                    android:layout_marginStart="@dimen/_16jdp"
+                    android:contentDescription="@string/imgcd_image"
+                    android:tint="@color/gray9D"
+                    app:srcCompat="@drawable/ic_call_black_24dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_8jdp"
+                    android:layout_marginLeft="@dimen/_16jdp"
+                    android:layout_marginRight="@dimen/_8jdp"
+                    android:layout_marginStart="@dimen/_16jdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_frgmnt_profile_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14jdp"
+                        tools:text="+91 1234567890" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mobile_sml"
+                        android:textColor="@color/gray9D"
+                        android:textSize="@dimen/_12jdp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--END Mobile-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1jdp"
+                android:layout_marginLeft="@dimen/_56jdp"
+                android:layout_marginStart="@dimen/_56jdp"
+                android:background="@color/grayE8" />
+
+            <!--START Email-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_10jdp"
+                android:paddingTop="@dimen/_16jdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20jdp"
+                    android:layout_height="@dimen/_20jdp"
+                    android:layout_marginLeft="@dimen/_16jdp"
+                    android:layout_marginStart="@dimen/_16jdp"
+                    android:contentDescription="@string/imgcd_image"
+                    android:tint="@color/gray9D"
+                    app:srcCompat="@drawable/ic_email_black_24dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_8jdp"
+                    android:layout_marginLeft="@dimen/_16jdp"
+                    android:layout_marginRight="@dimen/_8jdp"
+                    android:layout_marginStart="@dimen/_16jdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_frgmnt_profile_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14jdp"
+                        tools:text="info@jalotsav.com" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/email_sml"
+                        android:textColor="@color/gray9D"
+                        android:textSize="@dimen/_12jdp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--END Email-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1jdp"
+                android:layout_marginBottom="@dimen/_32jdp"
+                android:background="@color/grayE8" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_frgmnt_profile_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/_16jdp"
+        android:tint="@color/white"
+        app:srcCompat="@drawable/ic_edit_black_24dp" />
+</android.support.design.widget.CoordinatorLayout>
