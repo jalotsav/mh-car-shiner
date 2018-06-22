@@ -16,6 +16,7 @@
 
 package com.jalotsav.mhcarshiner.nvgtnvwmain;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -23,6 +24,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.jalotsav.mhcarshiner.ActvtyCarWashPackages;
+import com.jalotsav.mhcarshiner.R;
 
 /**
  * Created by Jalotsav on 6/12/2017.
@@ -32,6 +36,17 @@ public class FrgmntHome extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+
+        View rootView = inflater.inflate(R.layout.lo_frgmnt_home, container, false);
+
+        rootView.findViewById(R.id.appcmptbtn_frgmnt_carwashpckgs)
+                .setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        startActivity(new Intent(getActivity(), ActvtyCarWashPackages.class));
+                    }
+                });
+        return rootView;
     }
 }

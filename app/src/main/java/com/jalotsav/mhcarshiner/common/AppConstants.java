@@ -33,6 +33,7 @@ public interface AppConstants {
     String CHILD_LAST_NAME = "lastname";
     String CHILD_EMAIL = "email";
     String CHILD_MOBILE = "mobile";
+    String CHILD_WASH_PACKAGES = "washPackages";
 
     // PutExtra Keys
     String PUT_EXTRA_COME_FROM = "comeFrom";

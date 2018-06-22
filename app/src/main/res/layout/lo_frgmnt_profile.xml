@@ -43,7 +43,7 @@
                     android:id="@+id/tv_frgmnt_profile_firstcharname"
                     android:layout_width="@dimen/_100jdp"
                     android:layout_height="@dimen/_100jdp"
-                    android:background="@drawable/drwbl_bg_clrprmry_round_bordr_white"
+                    android:background="@drawable/drwbl_oval_bg_clrprmry_round_bordr_white"
                     android:gravity="center"
                     android:textAllCaps="true"
                     android:textColor="@color/whiteTrsprnt80"

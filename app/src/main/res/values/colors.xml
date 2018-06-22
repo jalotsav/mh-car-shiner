@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#2196F3</color>
     <color name="colorPrimaryDark">#0D5095</color>
-    <color name="colorAccent">#FF9800</color>
+    <color name="colorAccent">#21272B</color>
     <color name="colorPrimaryRed">#F44336</color>
     <color name="colorPrimaryDarkRed">#D32F2F</color>
     <color name="colorPrimaryPink">#E91E63</color>
@@ -124,4 +124,16 @@
     <color name="grdntstart_cyan">#00ECD2</color>
     <color name="grdntend_cyan">#00ADEA</color>
     <color name="grdntcenter_cyan">#00CADF</color>
+    <color name="grdntstart_cyan_trans">#DD00ECD2</color>
+    <color name="grdntend_cyan_trans">#DD00ADEA</color>
+    <color name="grdntcenter_cyan_trans">#DD00CADF</color>
+    <color name="grdntstart_red">#FE5393</color>
+    <color name="grdntend_red">#FA6773</color>
+    <color name="grdntcenter_red">#FC5B85</color>
+    <color name="grdntstart_red_trans">#DDFE5393</color>
+    <color name="grdntend_red_trans">#DDFA6773</color>
+    <color name="grdntcenter_red_trans">#DDFC5B85</color>
+    <color name="grdntstart_purple_trans">#DDBE3664</color>
+    <color name="grdntend_purple_trans">#DD202671</color>
+    <color name="grdntcenter_purple_trans">#DD772F6A</color>
 </resources>

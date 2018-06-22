@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2018 Jalotsav
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/lnrlyot_frgmnt_home_package"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150jdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/_16jdp"
+            android:layout_marginRight="@dimen/_16jdp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_light"
+                android:text="@string/make_your_carshine_everyday"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18jdp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/appcmptbtn_frgmnt_carwashpckgs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_24jdp"
+                android:background="@drawable/drwbl_rect_bg_clrprmry_round_corner"
+                android:paddingLeft="@dimen/_24jdp"
+                android:paddingRight="@dimen/_24jdp"
+                android:text="@string/carwash_package_sml"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14jdp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/lnrlyot_frgmnt_home_package"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/imgcd_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_carwash_byhand_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blackTrsprnt80"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_120jdp"
+                    android:layout_height="@dimen/_120jdp"
+                    android:contentDescription="@string/imgcd_image"
+                    android:src="@drawable/ic_logo_round_castshadow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10jdp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_24jdp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

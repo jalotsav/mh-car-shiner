@@ -75,6 +75,14 @@
     <string name="profile_sml">Profile</string>
     <string name="logout_sml">Logout</string>
 
+    <!--Home-->
+    <string name="carwash_package_sml">Car Wash Package</string>
+
+    <!--Car Wash Package-->
+    <string name="monthly_wash_val">Monthly Wash - %d</string>
+    <string name="book_now_sml">Book Now</string>
+    <string name="rupees_symbl_val">\u20B9 %d</string>
+
     <!--Profile-->
     <string name="mobile_sml">Mobile</string>
 

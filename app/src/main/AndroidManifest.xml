@@ -41,6 +41,11 @@
             android:label="@string/verify_mobile_sml"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActvtyCarWashPackages"
+            android:exported="true"
+            android:label="@string/carwash_package_sml"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2018 Jalotsav
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cordntrlyot_actvty_carwashpckgs"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <!--START Package 1-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/imgcd_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_carwash_byhand_2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/drwbl_gradiant_purple_trans"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/_16jdp"
+                    android:paddingRight="@dimen/_16jdp"
+                    android:paddingTop="@dimen/_10jdp">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/appcmptbtn_actvty_carwashpckgs_packg1_booknow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_36jdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/drwbl_rect_bg_trans_round_bordr_white"
+                        android:fontFamily="@font/rubik_light"
+                        android:paddingLeft="@dimen/_20jdp"
+                        android:paddingRight="@dimen/_20jdp"
+                        android:text="@string/book_now_sml"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12jdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_actvty_carwashpckgs_packg1_monthlywash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_toLeftOf="@id/appcmptbtn_actvty_carwashpckgs_packg1_booknow"
+                        android:layout_toStartOf="@id/appcmptbtn_actvty_carwashpckgs_packg1_booknow"
+                        android:fontFamily="@font/rubik_light"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14jdp"
+                        tools:text="@string/monthly_wash_val" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_actvty_carwashpckgs_packg1_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_light"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_28jdp"
+                        tools:text="Silver" />
+
+                    <TextView
+                        android:id="@+id/tv_actvty_carwashpckgs_packg1_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poiretone"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_20jdp"
+                        android:textStyle="bold"
+                        tools:text="@string/rupees_symbl_val" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <!--END Package 1-->
+
+        <!--START Package 2-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/imgcd_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_carwash_car_only_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/drwbl_gradiant_red_trans"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/_16jdp"
+                    android:paddingRight="@dimen/_16jdp"
+                    android:paddingTop="@dimen/_10jdp">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/appcmptbtn_actvty_carwashpckgs_packg2_booknow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_36jdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/drwbl_rect_bg_trans_round_bordr_white"
+                        android:fontFamily="@font/rubik_light"
+                        android:paddingLeft="@dimen/_20jdp"
+                        android:paddingRight="@dimen/_20jdp"
+                        android:text="@string/book_now_sml"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12jdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_actvty_carwashpckgs_packg2_monthlywash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_toLeftOf="@id/appcmptbtn_actvty_carwashpckgs_packg2_booknow"
+                        android:layout_toStartOf="@id/appcmptbtn_actvty_carwashpckgs_packg2_booknow"
+                        android:fontFamily="@font/rubik_light"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14jdp"
+                        tools:text="@string/monthly_wash_val" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_actvty_carwashpckgs_packg2_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_light"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_28jdp"
+                        tools:text="Gold" />
+
+                    <TextView
+                        android:id="@+id/tv_actvty_carwashpckgs_packg2_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poiretone"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_20jdp"
+                        android:textStyle="bold"
+                        tools:text="@string/rupees_symbl_val" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <!--END Package 2-->
+
+        <!--START Package 3-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/imgcd_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_carwash_byhand_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/drwbl_gradiant_cyan_trans"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/_16jdp"
+                    android:paddingRight="@dimen/_16jdp"
+                    android:paddingTop="@dimen/_10jdp">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/appcmptbtn_actvty_carwashpckgs_packg3_booknow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_36jdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/drwbl_rect_bg_trans_round_bordr_white"
+                        android:fontFamily="@font/rubik_light"
+                        android:paddingLeft="@dimen/_20jdp"
+                        android:paddingRight="@dimen/_20jdp"
+                        android:text="@string/book_now_sml"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12jdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_actvty_carwashpckgs_packg3_monthlywash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_toLeftOf="@id/appcmptbtn_actvty_carwashpckgs_packg3_booknow"
+                        android:layout_toStartOf="@id/appcmptbtn_actvty_carwashpckgs_packg3_booknow"
+                        android:fontFamily="@font/rubik_light"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14jdp"
+                        tools:text="@string/monthly_wash_val" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_actvty_carwashpckgs_packg3_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_light"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_28jdp"
+                        tools:text="Diamond" />
+
+                    <TextView
+                        android:id="@+id/tv_actvty_carwashpckgs_packg3_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poiretone"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_20jdp"
+                        android:textStyle="bold"
+                        tools:text="@string/rupees_symbl_val" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <!--END Package 3-->
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/prgrsbr_actvty_carwashpckgs"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+</android.support.design.widget.CoordinatorLayout>
