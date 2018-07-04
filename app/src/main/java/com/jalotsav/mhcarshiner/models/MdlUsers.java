@@ -25,13 +25,14 @@ import com.google.firebase.database.IgnoreExtraProperties;
 @IgnoreExtraProperties
 public class MdlUsers {
 
-    private String uId, firstname, lastname, email, mobile, passphrase, deviceType;
+    private String uId, firstname, lastname, email, mobile, passphrase, deviceType, createdOn, createdBy, modifiedOn, modifiedBy;
     private boolean active;
 
     public MdlUsers() {
     }
 
-    public MdlUsers(String uId, String firstname, String lastname, String email, String mobile, String passphrase, String deviceType, boolean active) {
+    public MdlUsers(String uId, String firstname, String lastname, String email, String mobile, String passphrase, String deviceType,
+                    String createdOn, String createdBy, String modifiedOn, String modifiedBy, boolean active) {
         this.uId = uId;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -39,6 +40,10 @@ public class MdlUsers {
         this.mobile = mobile;
         this.passphrase = passphrase;
         this.deviceType = deviceType;
+        this.createdOn = createdOn;
+        this.createdBy = createdBy;
+        this.modifiedOn = modifiedOn;
+        this.modifiedBy = modifiedBy;
         this.active = active;
     }
 
@@ -68,6 +73,22 @@ public class MdlUsers {
 
     public String getDeviceType() {
         return deviceType;
+    }
+
+    public String getCreatedOn() {
+        return createdOn;
+    }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public String getModifiedOn() {
+        return modifiedOn;
+    }
+
+    public String getModifiedBy() {
+        return modifiedBy;
     }
 
     public boolean isActive() {

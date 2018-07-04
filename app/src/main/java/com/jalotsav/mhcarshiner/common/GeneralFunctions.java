@@ -144,4 +144,12 @@ public class GeneralFunctions {
             v.setEnabled(false);
         }
     }
+
+    /***
+     * Get Current TimeStamp
+     * ***/
+    public static String getCurrentTimestamp() {
+
+        return String.valueOf(System.currentTimeMillis() / 1000);
+    }
 }

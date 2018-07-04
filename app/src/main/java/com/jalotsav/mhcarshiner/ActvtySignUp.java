@@ -234,7 +234,7 @@ public class ActvtySignUp extends AppCompatActivity implements AppConstants {
         DatabaseReference newUsersRef = mUsersRef.child(mPhoneAuthUid);
         newUsersRef.setValue(
                 new MdlUsers(mPhoneAuthUid, mFirstNameVal, mLastNameVal, mEmailVal, mMobileVal, mPasswordVal,
-                        DEVICE_TYPE_ANDROID, true))
+                        DEVICE_TYPE_ANDROID, GeneralFunctions.getCurrentTimestamp(), mPhoneAuthUid, "", "", true))
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
