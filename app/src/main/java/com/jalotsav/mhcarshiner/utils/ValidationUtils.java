@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
 
@@ -79,6 +80,20 @@ public class ValidationUtils {
             mTxtinptlyot.setErrorEnabled(true);
             mTxtinptlyot.setError(errorMsg);
             requestFocus(context, mTxtinptEt);
+            return false;
+        } else {
+            mTxtinptlyot.setError(null);
+            mTxtinptlyot.setErrorEnabled(false);
+            return true;
+        }
+    }
+
+    // Check Empty validation for String with TextInputLayout
+    public static boolean validateEmpty(TextInputLayout mTxtinptlyot, String stringVal, String errorMsg) {
+
+        if (TextUtils.isEmpty(stringVal)) {
+            mTxtinptlyot.setErrorEnabled(true);
+            mTxtinptlyot.setError(errorMsg);
             return false;
         } else {
             mTxtinptlyot.setError(null);

@@ -34,10 +34,26 @@ public interface AppConstants {
     String CHILD_EMAIL = "email";
     String CHILD_MOBILE = "mobile";
     String CHILD_WASH_PACKAGES = "washPackages";
+    String CHILD_VEHICLE_TYPES = "vehicleTypes";
+    String CHILD_WASH_TIMING = "washTiming";
+    String CHILD_ORDERS = "orders";
+    String CHILD_VEHICLE_DETAILS = "vehicleDetails";
+    String CHILD_ADDRESS_DETAILS = "addressDetails";
+    String CHILD_WASH_PACKAGES_DETAILS = "washPackagesDetails"; // used under ORDER child
+
+    // Order Status
+    String ORDER_STATUS_PENDING = "Pending";
+    String ORDER_STATUS_REJECTED = "Rejected";
+    String ORDER_STATUS_COMPLETED = "Completed";
 
     // PutExtra Keys
     String PUT_EXTRA_COME_FROM = "comeFrom";
     String PUT_EXTRA_NVGTNVW_POSTN = "nvgtnvwPosition";
+    String PUT_EXTRA_POSITION = "position";
+    String PUT_EXTRA_WASHPACKAGE_ID = "washPackageId";
+    String PUT_EXTRA_WASHPACKAGE_NAME = "washPackageName";
+    String PUT_EXTRA_WASHPACKAGE_MONTHLYWASH = "washPackageMonthlyWash";
+    String PUT_EXTRA_WASHPACKAGE_PRICE = "washPackagePrice";
 
     // NavigationView Drawer MenuItem position check for direct open that fragment
     int NVGTNVW_HOME = 21;

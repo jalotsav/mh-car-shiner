@@ -16,6 +16,7 @@
 
 package com.jalotsav.mhcarshiner;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -36,6 +37,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.jalotsav.mhcarshiner.common.AppConstants;
+import com.jalotsav.mhcarshiner.common.GeneralFunctions;
 import com.jalotsav.mhcarshiner.models.MdlCarWashPackages;
 
 import java.util.ArrayList;
@@ -93,7 +95,10 @@ public class ActvtyCarWashPackages extends AppCompatActivity implements AppConst
 
         mArrylstWashPackages = new ArrayList<>();
         disableView(mAppcmptbtnPackg1BookNow, mAppcmptbtnPackg2BookNow, mAppcmptbtnPackg3BookNow);
-        fetchWashPackages();
+
+        if(GeneralFunctions.isNetConnected(this))
+            fetchWashPackages();
+        else Snackbar.make(mCrdntrlyot, mNoInternetConnMsg, Snackbar.LENGTH_LONG).show();
     }
 
     private void fetchWashPackages() {
@@ -160,13 +165,31 @@ public class ActvtyCarWashPackages extends AppCompatActivity implements AppConst
         switch (view.getId()) {
             case R.id.appcmptbtn_actvty_carwashpckgs_packg1_booknow:
 
+                startBookOrderActivity(0);
                 break;
             case R.id.appcmptbtn_actvty_carwashpckgs_packg2_booknow:
 
+                startBookOrderActivity(1);
                 break;
             case R.id.appcmptbtn_actvty_carwashpckgs_packg3_booknow:
 
+                startBookOrderActivity(2);
                 break;
+        }
+    }
+
+    // start Book Order activity with selected Package values
+    private void startBookOrderActivity(int position) {
+
+        try {
+            startActivity(new Intent(this, ActvtyBookOrder.class)
+                    .putExtra(PUT_EXTRA_POSITION, position)
+                    .putExtra(PUT_EXTRA_WASHPACKAGE_ID, mArrylstWashPackages.get(position).getId())
+                    .putExtra(PUT_EXTRA_WASHPACKAGE_NAME, mArrylstWashPackages.get(position).getName())
+                    .putExtra(PUT_EXTRA_WASHPACKAGE_MONTHLYWASH, mArrylstWashPackages.get(position).getMonthlyWash())
+                    .putExtra(PUT_EXTRA_WASHPACKAGE_PRICE, mArrylstWashPackages.get(position).getPrice()));
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

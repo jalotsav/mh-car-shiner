@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2018 Jalotsav
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cordntrlyot_actvty_book_order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarlyot_actvty_book_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/colpstoolbar_actvty_book_order"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?android:attr/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            tools:ignore="NewApi">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180jdp"
+                app:layout_collapseMode="parallax">
+
+                <ImageView
+                    android:id="@+id/imgvw_actvty_book_order_packgimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/imgcd_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_carwash_byhand_2" />
+
+                <LinearLayout
+                    android:id="@+id/lnrlyot_actvty_book_order_packgbackgrnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/drwbl_gradiant_purple_trans"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_actvty_book_order_packgmonthlywash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/_16jdp"
+                        android:layout_marginRight="@dimen/_16jdp"
+                        android:layout_marginTop="@dimen/_16jdp"
+                        android:fontFamily="@font/rubik_light"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_16jdp"
+                        tools:text="@string/monthly_wash_val" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/_10jdp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_actvty_book_order_packgname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_light"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_30jdp"
+                            tools:text="Silver" />
+
+                        <TextView
+                            android:id="@+id/tv_actvty_book_order_packgprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poiretone"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_22jdp"
+                            android:textStyle="bold"
+                            tools:text="@string/rupees_symbl_val" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_actvty_book_order"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_32jdp"
+        app:behavior_overlapTop="@dimen/_40jdp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_8jdp">
+
+            <!--START Car Details-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardvw_actvty_book_order_cardtls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8jdp"
+                cardview:cardCornerRadius="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16jdp"
+                    android:layout_marginRight="@dimen/_16jdp"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_5jdp"
+                    android:paddingTop="@dimen/_5jdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/_5jdp"
+                        android:paddingTop="@dimen/_5jdp">
+
+                        <ImageView
+                            android:id="@+id/imgvw_actvty_book_order_cardtls_caricon"
+                            android:layout_width="@dimen/_24jdp"
+                            android:layout_height="@dimen/_24jdp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/imgcd_image"
+                            app:srcCompat="@drawable/ic_car_front_colorful" />
+
+                        <ImageView
+                            android:id="@+id/imgvw_actvty_book_order_cardtls_colpsexpnd"
+                            android:layout_width="@dimen/_24jdp"
+                            android:layout_height="@dimen/_24jdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/imgcd_image"
+                            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/imgvw_actvty_book_order_cardtls_caricon"
+                            android:layout_toLeftOf="@id/imgvw_actvty_book_order_cardtls_colpsexpnd"
+                            android:layout_toRightOf="@id/imgvw_actvty_book_order_cardtls_caricon"
+                            android:layout_toStartOf="@id/imgvw_actvty_book_order_cardtls_colpsexpnd"
+                            android:paddingLeft="@dimen/_8jdp"
+                            android:paddingRight="@dimen/_8jdp"
+                            android:text="@string/car_details_sml"
+                            android:textSize="@dimen/_18jdp" />
+                    </RelativeLayout>
+
+                    <!--START Inner View-->
+                    <LinearLayout
+                        android:id="@+id/lnrlyot_actvty_book_order_cardtls_innervw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10jdp"
+                        android:layout_marginTop="@dimen/_10jdp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <!--Vehicle Name-->
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/txtinputlyot_actvty_book_order_cardtls_vehiclename"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/txtinptet_actvty_book_order_cardtls_vehiclename"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/vehicle_name_sml"
+                                android:inputType="text"
+                                android:textColorHint="@color/grayA8"
+                                android:textSize="@dimen/_14jdp" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <!--Vehicle Number-->
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/txtinputlyot_actvty_book_order_cardtls_vehiclenumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10jdp">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/txtinptet_actvty_book_order_cardtls_vehiclenumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/vehicle_number_sml"
+                                android:inputType="text"
+                                android:textColorHint="@color/grayA8"
+                                android:textSize="@dimen/_14jdp" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <!--Select Vehicle Type-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10jdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/select_vehicle_type_sml"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10jdp" />
+
+                            <Spinner
+                                android:id="@+id/spnr_actvty_book_order_cardtls_vehicletype"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5jdp" />
+
+                            <ProgressBar
+                                android:id="@+id/prgrsbr_actvty_book_order_cardtls_vehicletype"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:indeterminate="true"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <!--Select Wash Time-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10jdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/select_wash_time_sml"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10jdp" />
+
+                            <Spinner
+                                android:id="@+id/spnr_actvty_book_order_cardtls_washtime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5jdp" />
+
+                            <ProgressBar
+                                android:id="@+id/prgrsbr_actvty_book_order_cardtls_washtime"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:indeterminate="true"
+                                android:visibility="gone" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--END Inner View-->
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!--END Car Details-->
+
+            <!--START Address Details-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardvw_actvty_book_order_addressdtls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8jdp"
+                android:layout_marginLeft="@dimen/_8jdp"
+                android:layout_marginRight="@dimen/_8jdp"
+                cardview:cardCornerRadius="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16jdp"
+                    android:layout_marginRight="@dimen/_16jdp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_5jdp"
+                    android:paddingTop="@dimen/_5jdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/_5jdp"
+                        android:paddingTop="@dimen/_5jdp">
+
+                        <ImageView
+                            android:id="@+id/imgvw_actvty_book_order_addressdtls_locationicon"
+                            android:layout_width="@dimen/_24jdp"
+                            android:layout_height="@dimen/_24jdp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/imgcd_image"
+                            app:srcCompat="@drawable/ic_location_pin_withhome" />
+
+                        <ImageView
+                            android:id="@+id/imgvw_actvty_book_order_addressdtls_colpsexpnd"
+                            android:layout_width="@dimen/_24jdp"
+                            android:layout_height="@dimen/_24jdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/imgcd_image"
+                            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/imgvw_actvty_book_order_addressdtls_locationicon"
+                            android:layout_toLeftOf="@id/imgvw_actvty_book_order_addressdtls_colpsexpnd"
+                            android:layout_toRightOf="@id/imgvw_actvty_book_order_addressdtls_locationicon"
+                            android:layout_toStartOf="@id/imgvw_actvty_book_order_addressdtls_colpsexpnd"
+                            android:paddingLeft="@dimen/_8jdp"
+                            android:paddingRight="@dimen/_8jdp"
+                            android:text="@string/address_details_sml"
+                            android:textSize="@dimen/_18jdp" />
+                    </RelativeLayout>
+
+                    <!--START Inner View-->
+                    <LinearLayout
+                        android:id="@+id/lnrlyot_actvty_book_order_addressdtls_innervw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10jdp"
+                        android:layout_marginTop="@dimen/_10jdp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <!--Flat no., Building name-->
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/txtinputlyot_actvty_book_order_addressdtls_flatno"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/txtinptet_actvty_book_order_addressdtls_faltno"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/flatno_buildingname_sml"
+                                android:inputType="text"
+                                android:textColorHint="@color/grayA8"
+                                android:textSize="@dimen/_14jdp" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <!--Locality, area or street-->
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/txtinputlyot_actvty_book_order_addressdtls_street"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/txtinptet_actvty_book_order_addressdtls_street"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/locality_area_street_sml"
+                                android:inputType="text"
+                                android:textColorHint="@color/grayA8"
+                                android:textSize="@dimen/_14jdp" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <!--Pincode-->
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/txtinputlyot_actvty_book_order_addressdtls_pincode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/txtinptet_actvty_book_order_addressdtls_pincode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 -"
+                                android:hint="@string/pincode_sml"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:maxLength="9"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColorHint="@color/grayA8"
+                                android:textSize="@dimen/_14jdp" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <!--City-->
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/txtinputlyot_actvty_book_order_addressdtls_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/autocmplttv_actvty_book_order_addressdtls_city"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/city_sml"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"
+                                android:textColorHint="@color/grayA8"
+                                android:textSize="@dimen/_14jdp" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <!--END Inner View-->
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!--END Address Details-->
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/appcmptbtn_actvty_book_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="@string/book_order_sml"
+        android:textColor="@color/white" />
+
+    <ProgressBar
+        android:id="@+id/prgrsbr_actvty_book_order"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+</android.support.design.widget.CoordinatorLayout>

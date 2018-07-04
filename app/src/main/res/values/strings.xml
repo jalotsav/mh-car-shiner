@@ -4,6 +4,8 @@
     <string name="no_intrnt_cnctn">No internet connection</string>
     <string name="server_problem_sml">There are some server problem.</string>
     <string name="internal_problem_sml">There are some internal problem.</string>
+    <string name="no_data_avlbl_refresh">No data available, Please Refresh.</string>
+    <string name="refresh_sml">Refresh</string>
     <string name="indevlpmnt_sml">In Development</string>
     <string name="please_wait_3dots">Please wait&#8230;</string>
 
@@ -41,9 +43,6 @@
     <string name="mobileno_not_verfd">Mobile number not verified</string>
     <string name="exist_sml">exist</string>
     <string name="sucsfly_regstr_sml">Successfully registration.</string>
-
-    <string name="city_sml">City</string>
-    <string name="entr_city_sml">Enter city</string>
 
     <!-- Mobile Verification -->
     <string name="verify_mobile_sml">Verify Mobile</string>
@@ -83,10 +82,48 @@
     <string name="book_now_sml">Book Now</string>
     <string name="rupees_symbl_val">\u20B9 %d</string>
 
+    <!--Book Order-->
+    <string name="book_order_sml">Book order</string>
+    <string name="car_details_sml">Car Details</string>
+    <string name="vehicle_name_sml">Vehicle name</string>
+    <string name="entr_vehicle_name_sml">Enter vehicle name</string>
+    <string name="vehicle_number_sml">Vehicle number</string>
+    <string name="entr_vehicle_number_sml">Enter Vehicle number</string>
+    <string name="select_vehicle_type_sml">Select Vehicle type</string>
+    <string-array name="vehicle_types">
+        <item>Hatchback</item>
+        <item>Sedan</item>
+        <item>SUV</item>
+        <item>Luxury</item>
+    </string-array>
+    <string name="select_wash_time_sml">Select Wash time</string>
+    <string-array name="wash_times">
+        <item>6:00 to 6:30 AM</item>
+        <item>6:30 to 7:00 AM</item>
+        <item>7:00 to 7:30 AM</item>
+        <item>7:30 to 8:00 AM</item>
+        <item>8:00 to 8:30 AM</item>
+        <item>8:30 to 9:00 AM</item>
+        <item>9:00 to 9:30 AM</item>
+        <item>9:30 to 10:00 AM</item>
+    </string-array>
+    <string name="address_details_sml">Address Details</string>
+    <string name="flatno_buildingname_sml">Flat no., Building name</string>
+    <string name="entr_flatno_buildingname_sml">Enter Flat no., Building name</string>
+    <string name="locality_area_street_sml">Locality, area or street</string>
+    <string name="entr_locality_area_street_sml">Enter Locality, area or street</string>
+    <string name="pincode_sml">Pincode</string>
+    <string name="entr_pincode_sml">Enter Pincode</string>
+    <string name="city_sml">City</string>
+    <string name="entr_valid_city_sml">Enter or select valid city</string>
+
     <!--Profile-->
     <string name="mobile_sml">Mobile</string>
 
     <!--Logout-->
     <string name="logout_alrtdlg_msg">Do you want to logout?</string>
     <string name="no_sml">No</string>
+
+    <!--Google Place API key-->
+    <string name="google_geo_api_key">AIzaSyDNQamsSS0b0lqy4xXLBtc17xs8aP0uEu8</string>
 </resources>

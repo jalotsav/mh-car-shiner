@@ -109,7 +109,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_16jdp"
             android:text="@string/notmember_registernow"
-            android:textColor="@color/white"
+            android:textColor="@color/whiteTrsprnt80"
             android:textSize="@dimen/_14jdp" />
 
         <!--SignUp-->

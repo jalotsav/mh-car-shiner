@@ -5,7 +5,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorButtonNormal">@color/colorPrimaryOrange</item>
+        <item name="colorButtonNormal">@color/colorAccent</item>
     </style>
 
     <!-- AppTheme NoActionBar -->
@@ -25,7 +25,6 @@
     <!-- AppTheme Background & Button Style -->
     <style name="AppTheme.NoActionBar.BGStyle">
         <item name="android:windowBackground">@drawable/drwbl_gradiant_bluedark</item>
-        <item name="colorButtonNormal">@color/colorPrimaryAmber</item>
     </style>
 
     <!-- AppTheme Navigation NoActionBar Style -->
@@ -43,7 +42,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorButtonNormal">@color/colorPrimaryOrange</item>
+        <item name="colorButtonNormal">@color/white</item>
     </style>
 
     <!-- AppThemeDark NoActionBar -->
@@ -55,7 +54,6 @@
     <!-- AppThemeDark Background & Button Style -->
     <style name="AppThemeDark.NoActionBar.BGStyle">
         <item name="android:windowBackground">@drawable/drwbl_gradiant_bluedark</item>
-        <item name="colorButtonNormal">@color/colorPrimaryAmber</item>
     </style>
 
     <!--Material Design Theme-->
@@ -67,6 +65,20 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDarkBlueMidnight</item>
         <item name="colorAccent">@color/colorPrimaryBlue</item>
         <item name="colorButtonNormal">@color/colorPrimaryBlue</item>
+    </style>
+
+    <!--Material Theme Blue + Orange-->
+    <style name="MDTheme.BlueOrange">
+        <item name="colorPrimary">@color/colorPrimaryBlue</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryOrange</item>
+        <item name="colorButtonNormal">@color/colorPrimaryOrange</item>
+    </style>
+
+    <!-- MDTheme NoActionBar -->
+    <style name="MDTheme.BlueOrange.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <!--ColorAccent Amber style-->
