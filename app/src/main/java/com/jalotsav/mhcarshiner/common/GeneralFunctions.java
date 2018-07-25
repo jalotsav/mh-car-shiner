@@ -22,9 +22,12 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.text.TextUtils;
+import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.Calendar;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -151,5 +154,25 @@ public class GeneralFunctions {
     public static String getCurrentTimestamp() {
 
         return String.valueOf(System.currentTimeMillis() / 1000);
+    }
+
+    /***
+     * Convert Timestamp to dd-MMM-yyyy Date format
+     * ***/
+    public static String getDateFromTimestamp(String timestamp) {
+
+        Calendar cal = Calendar.getInstance(Locale.ENGLISH);
+        cal.setTimeInMillis(Long.parseLong(timestamp) * 1000);
+        return DateFormat.format("dd-MMM-yyyy", cal).toString();
+    }
+
+    /***
+     * Convert Timestamp to dd-MMM-yyyy HH:mm Date format
+     * ***/
+    public static String getDateTimeFromTimestamp(String timestamp) {
+
+        Calendar cal = Calendar.getInstance(Locale.ENGLISH);
+        cal.setTimeInMillis(Long.parseLong(timestamp) * 1000);
+        return DateFormat.format("dd-MMM-yyyy HH:mm a", cal).toString();
     }
 }

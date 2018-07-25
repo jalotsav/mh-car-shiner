@@ -22,6 +22,12 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
+    <!-- AppTheme NoActionBar Translucent StatusBar -->
+    <style name="AppTheme.NoActionBar.TranslucentStatus">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
     <!-- AppTheme Background & Button Style -->
     <style name="AppTheme.NoActionBar.BGStyle">
         <item name="android:windowBackground">@drawable/drwbl_gradiant_bluedark</item>

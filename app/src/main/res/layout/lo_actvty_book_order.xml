@@ -223,7 +223,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/vehicle_number_sml"
-                                android:inputType="text"
+                                android:maxLength="16"
+                                android:inputType="textCapCharacters"
                                 android:textColorHint="@color/grayA8"
                                 android:textSize="@dimen/_14jdp" />
                         </android.support.design.widget.TextInputLayout>

@@ -16,6 +16,13 @@
 
 <resources>
 
+    <!-- AppTheme NoActionBar Translucent StatusBar -->
+    <style name="AppTheme.NoActionBar.TranslucentStatus">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
     <!-- AppTheme Navigation NoActionBar Style -->
     <style name="AppTheme.NavigationNoActionBar">
         <item name="windowActionBar">false</item>

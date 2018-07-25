@@ -16,6 +16,7 @@
 
 package com.jalotsav.mhcarshiner;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -141,7 +142,7 @@ public class ActvtyBookOrder extends AppCompatActivity implements AppConstants ,
     @BindString(R.string.entr_valid_city_sml) String mEntrSelectValidCity;
 
     String mPackageId, mPackageName, mSelectedCityVal,
-            mVehicleNameVal, mVehicleNumberVal, mVehicleTypeVal, mWashTimeVal, mFlatNoVal, mStreetVal, mPincodeVal;
+            mVehicleNameVal, mVehicleNumberVal, mVehicleTypeVal, mWashTimeVal, mFlatNoVal, mStreetVal, mPincodeVal, mOrderBookedDate;
     int mPackagePosition, mPackageMonthlyWash, mPackagePrice, mPreviousOrderNumber;
     boolean mIsExpandedCarDtls, mIsExpandedAddressDtls;
     FirebaseDatabase mDatabase;
@@ -568,18 +569,19 @@ public class ActvtyBookOrder extends AppCompatActivity implements AppConstants ,
     private void writeNewOrder() {
 
         mVehicleNameVal = mTxtinptEtVehicleName.getText().toString().trim();
-        mVehicleNumberVal = mTxtinptEtVehicleNo.getText().toString().trim();
+        mVehicleNumberVal = mTxtinptEtVehicleNo.getText().toString().trim().toUpperCase();
         mVehicleTypeVal = mArrylstVehicleType.get(mSpnrVehicleType.getSelectedItemPosition()).getVehicleType();
         mWashTimeVal = mArrylstWashTiming.get(mSpnrWashTime.getSelectedItemPosition()).getWashTime();
         mFlatNoVal = mTxtinptEtFlatNo.getText().toString().trim();
         mStreetVal = mTxtinptEtStreet.getText().toString().trim();
         mPincodeVal = mTxtinptEtPincode.getText().toString().trim();
+        mOrderBookedDate = GeneralFunctions.getCurrentTimestamp();
 
         UserSessionManager session = new UserSessionManager(this);
         final DatabaseReference newOrderRef = mOrdersRef.push();
         newOrderRef.setValue(
                 new MdlOrder(newOrderRef.getKey(), mPreviousOrderNumber, session.getUserId(), session.getMobile(), ORDER_STATUS_PENDING,
-                        GeneralFunctions.getCurrentTimestamp(), session.getUserId(), "", ""))
+                        mOrderBookedDate, session.getUserId(), "", ""))
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
@@ -597,8 +599,13 @@ public class ActvtyBookOrder extends AppCompatActivity implements AppConstants ,
                             DatabaseReference newWashPackageDetailsRef = mOrdersRef.child(newOrderRef.getKey()).child(CHILD_WASH_PACKAGES_DETAILS);
                             newWashPackageDetailsRef.setValue(new MdlCarWashPackages(mPackageId, mPackageName, mPackageMonthlyWash, mPackagePrice));
 
-                            Toast.makeText(ActvtyBookOrder.this, "ORDER placed successfully.", Toast.LENGTH_SHORT).show();
                             finish();
+                            startActivity(new Intent(ActvtyBookOrder.this, ActvtyBookOrderConfirmed.class)
+                                    .putExtra(PUT_EXTRA_POSITION, mPackagePosition)
+                                    .putExtra(PUT_EXTRA_WASHPACKAGE_PRICE, mPackagePrice)
+                                    .putExtra(PUT_EXTRA_WASHPACKAGE_MONTHLYWASH, mPackageMonthlyWash)
+                                    .putExtra(PUT_EXTRA_ORDER_NUMBER, mPreviousOrderNumber)
+                                    .putExtra(PUT_EXTRA_ORDER_BOOKED_DATE, mOrderBookedDate));
                         } catch (Exception e) {
                             e.printStackTrace();
                             Log.e(TAG, "writeNewOrder - onSuccess:  " + e.getMessage());

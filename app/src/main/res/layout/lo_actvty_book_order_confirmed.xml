@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2018 Jalotsav
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false">
+
+    <RelativeLayout
+        android:id="@+id/rltvlyot_actvty_book_order_confirmed_mainbackgrnd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/drwbl_gradiant_purple_trans">
+
+        <com.jalotsav.mhcarshiner.common.TicketView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_16jdp"
+            android:layout_marginRight="@dimen/_16jdp"
+            android:layout_marginTop="@dimen/_40jdp"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_10jdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16jdp"
+                android:paddingLeft="@dimen/_16jdp"
+                android:paddingRight="@dimen/_16jdp"
+                android:text="@string/thankyou_chooseus_sml"
+                android:textSize="@dimen/_16jdp" />
+
+            <!--Order Number-->
+            <TextView
+                android:id="@+id/tv_actvty_book_order_confirmed_ordernumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poiretone"
+                android:paddingLeft="@dimen/_16jdp"
+                android:paddingRight="@dimen/_16jdp"
+                android:textColor="@color/colorPrimaryBlueMidnight"
+                android:textSize="@dimen/_32jdp"
+                tools:text="@string/hashtag_val" />
+
+            <!--Order Confirmed-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_16jdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_180jdp"
+                    android:layout_height="@dimen/_64jdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_32jdp"
+                    android:contentDescription="@string/imgcd_image"
+                    android:src="@drawable/img_success_colorful" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1jdp"
+                    android:background="@color/grayLight" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_32jdp"
+                    android:fontFamily="@font/rubik_light"
+                    android:text="@string/order_confirmed_sml"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimaryBlueMidnight"
+                    android:textSize="@dimen/_20jdp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--Package Details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/_16jdp"
+                android:paddingRight="@dimen/_16jdp"
+                android:weightSum="2">
+
+                <!--Payable Amount-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/payable_amnt_sml"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_12jdp" />
+
+                    <TextView
+                        android:id="@+id/tv_actvty_book_order_confirmed_payableamount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poiretone"
+                        android:text="@string/rupees_symbl_val"
+                        android:textColor="@color/colorPrimaryBlueMidnight"
+                        android:textSize="@dimen/_26jdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!--Monthly Wash-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/monthly_wash_sml"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_12jdp" />
+
+                    <TextView
+                        android:id="@+id/tv_actvty_book_order_confirmed_monthlywash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poiretone"
+                        android:textColor="@color/colorPrimaryBlueMidnight"
+                        android:textSize="@dimen/_26jdp"
+                        android:textStyle="bold"
+                        tools:text="15" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Order Booked Date-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8jdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/_16jdp"
+                android:paddingRight="@dimen/_16jdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_18jdp"
+                    android:layout_height="@dimen/_18jdp"
+                    android:contentDescription="@string/imgcd_image"
+                    android:tint="@color/colorPrimaryGrey"
+                    app:srcCompat="@drawable/ic_event_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tv_actvty_book_order_confirmed_bookeddate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8jdp"
+                    android:layout_marginStart="@dimen/_8jdp"
+                    android:fontFamily="@font/poiretone"
+                    android:textColor="@color/colorPrimaryBlueMidnight"
+                    android:textSize="@dimen/_14jdp"
+                    android:textStyle="bold"
+                    tools:text="25 July 2017 00:00" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16jdp"
+                android:fontFamily="@font/rubik_light"
+                android:paddingLeft="@dimen/_16jdp"
+                android:paddingRight="@dimen/_16jdp"
+                android:text="@string/adviser_contact_shortly_msg"
+                android:textSize="@dimen/_14jdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8jdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/_16jdp"
+                android:paddingRight="@dimen/_16jdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_light"
+                    android:text="@string/need_help_quemark"
+                    android:textSize="@dimen/_14jdp" />
+
+                <TextView
+                    android:id="@+id/tv_actvty_book_order_success_contactus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8jdp"
+                    android:layout_marginStart="@dimen/_8jdp"
+                    android:fontFamily="@font/rubik_light"
+                    android:text="@string/contactus_sml"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimaryDarkBlue"
+                    android:textSize="@dimen/_14jdp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.jalotsav.mhcarshiner.common.TicketView>
+
+        <Button
+            android:id="@+id/btn_actvty_book_order_success_myorders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_8jdp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/rubik_light"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingLeft="@dimen/_16jdp"
+            android:paddingRight="@dimen/_16jdp"
+            android:text="@string/myorders_sml"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_28jdp" />
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -21,7 +21,7 @@
     android:background="@drawable/drwbl_gradiant_cyan"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".ActvtyMain">
+    tools:context=".ActvtySplash">
 
     <ImageView
         android:layout_width="@dimen/_180jdp"

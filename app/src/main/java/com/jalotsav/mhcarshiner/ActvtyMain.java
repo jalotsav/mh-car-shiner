@@ -6,7 +6,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -95,6 +94,9 @@ public class ActvtyMain extends AppCompatActivity implements NavigationView.OnNa
             case AppConstants.NVGTNVW_MYORDER:
 
                 return mNavgtnVw.getMenu().findItem(R.id.action_nvgtndrwr_main_myorder);
+            case AppConstants.NVGTNVW_CONTACTUS:
+
+                return mNavgtnVw.getMenu().findItem(R.id.action_nvgtndrwr_main_contactus);
             default:
 
                 return mNavgtnVw.getMenu().findItem(R.id.action_nvgtndrwr_main_home);
@@ -121,7 +123,7 @@ public class ActvtyMain extends AppCompatActivity implements NavigationView.OnNa
             case R.id.action_nvgtndrwr_main_myorder:
 
                 fragment = new FrgmntMyOrder();
-                mToolbar.setTitle(getString(R.string.myorder_sml));
+                mToolbar.setTitle(getString(R.string.myorders_sml));
                 loadFragment(fragment, item);
                 return true;
             case R.id.action_nvgtndrwr_main_aboutus:

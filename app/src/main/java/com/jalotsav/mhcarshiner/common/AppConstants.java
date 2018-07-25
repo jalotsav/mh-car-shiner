@@ -54,10 +54,13 @@ public interface AppConstants {
     String PUT_EXTRA_WASHPACKAGE_NAME = "washPackageName";
     String PUT_EXTRA_WASHPACKAGE_MONTHLYWASH = "washPackageMonthlyWash";
     String PUT_EXTRA_WASHPACKAGE_PRICE = "washPackagePrice";
+    String PUT_EXTRA_ORDER_NUMBER = "orderNumber";
+    String PUT_EXTRA_ORDER_BOOKED_DATE = "orderBookedDate";
 
     // NavigationView Drawer MenuItem position check for direct open that fragment
     int NVGTNVW_HOME = 21;
     int NVGTNVW_MYORDER = 22;
+    int NVGTNVW_CONTACTUS = 23;
 
     // Request Keys
     int REQUEST_VERFCTN_MOBILENO = 101;

@@ -43,7 +43,6 @@
             android:theme="@style/MDTheme.BlueOrange.NoActionBar" />
         <activity
             android:name=".ActvtyCarWashPackages"
-            android:exported="true"
             android:label="@string/carwash_package_sml"
             android:screenOrientation="portrait" />
         <activity
@@ -51,6 +50,12 @@
             android:label="@string/book_order_sml"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActvtyBookOrderConfirmed"
+            android:label="@string/book_order_sml"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.TranslucentStatus" />
 
         <meta-data
             android:name="com.google.android.gms.version"

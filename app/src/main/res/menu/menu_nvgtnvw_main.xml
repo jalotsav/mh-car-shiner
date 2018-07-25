@@ -23,7 +23,7 @@
     <item
         android:id="@+id/action_nvgtndrwr_main_myorder"
         android:icon="@drawable/ic_playlist_add_check_black_24dp"
-        android:title="@string/myorder_sml" />
+        android:title="@string/myorders_sml" />
     <item android:title="@string/app_name">
         <menu>
             <group android:checkableBehavior="single">

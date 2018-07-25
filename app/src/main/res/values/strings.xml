@@ -65,7 +65,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="home_sml">Home</string>
-    <string name="myorder_sml">My Order</string>
+    <string name="myorders_sml">My Orders</string>
     <string name="aboutus_sml">About Us</string>
     <string name="contactus_sml">Contact Us</string>
     <string name="shareapp_sml">Share the App</string>
@@ -116,6 +116,16 @@
     <string name="entr_pincode_sml">Enter Pincode</string>
     <string name="city_sml">City</string>
     <string name="entr_valid_city_sml">Enter or select valid city</string>
+
+    <!--Book Order Success-->
+    <string name="hashtag_val"># %d</string>
+    <string name="thankyou_chooseus_sml">Thank you for choose us</string>
+    <string name="order_confirmed_sml">Order Confirmed</string>
+    <string name="payable_amnt_sml">Payable amount</string>
+    <string name="monthly_wash_sml">Monthly Wash</string>
+    <string name="your_service_confrmd_sml">Your service is confirmed.</string>
+    <string name="adviser_contact_shortly_msg">Our adviser will contact you shortly &amp; discuss about payment.</string>
+    <string name="need_help_quemark">Need help?</string>
 
     <!--Profile-->
     <string name="mobile_sml">Mobile</string>
