@@ -127,6 +127,11 @@
     <string name="adviser_contact_shortly_msg">Our adviser will contact you shortly &amp; discuss about payment.</string>
     <string name="need_help_quemark">Need help?</string>
 
+    <!--My Orders-->
+    <string name="order_hashtag_val">Order # %d</string>
+    <string name="location_sml">Location</string>
+    <string name="orders_appear_here">Orders appear here</string>
+
     <!--Profile-->
     <string name="mobile_sml">Mobile</string>
 

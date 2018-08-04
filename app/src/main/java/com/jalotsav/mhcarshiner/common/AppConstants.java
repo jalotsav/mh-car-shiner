@@ -40,11 +40,18 @@ public interface AppConstants {
     String CHILD_VEHICLE_DETAILS = "vehicleDetails";
     String CHILD_ADDRESS_DETAILS = "addressDetails";
     String CHILD_WASH_PACKAGES_DETAILS = "washPackagesDetails"; // used under ORDER child
+    String CHILD_USER_MOBILE = "userMobile";
 
     // Order Status
     String ORDER_STATUS_PENDING = "Pending";
+    String ORDER_STATUS_APPROVED = "Approved";
     String ORDER_STATUS_REJECTED = "Rejected";
     String ORDER_STATUS_COMPLETED = "Completed";
+
+    // Wash Package
+    String WASH_PACKAGE_SILVER = "Silver";
+    String WASH_PACKAGE_GOLD = "Gold";
+    String WASH_PACKAGE_DIAMOND = "Diamond";
 
     // PutExtra Keys
     String PUT_EXTRA_COME_FROM = "comeFrom";
