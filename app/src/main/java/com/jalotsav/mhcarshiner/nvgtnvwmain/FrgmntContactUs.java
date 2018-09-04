@@ -24,6 +24,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.jalotsav.mhcarshiner.R;
+
 /**
  * Created by Jalotsav on 6/12/2017.
  */
@@ -32,6 +34,9 @@ public class FrgmntContactUs extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+
+        View rootView = inflater.inflate(R.layout.lo_frgmnt_contactus, container, false);
+
+        return rootView;
     }
 }

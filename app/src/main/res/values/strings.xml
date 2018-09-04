@@ -132,6 +132,13 @@
     <string name="location_sml">Location</string>
     <string name="orders_appear_here">Orders appear here</string>
 
+    <!--Contact Us-->
+    <string name="get_in_touch_sml">Get in touch!</string>
+    <string name="subject_sml">Subject</string>
+    <string name="entr_subject_sml">Enter Subject</string>
+    <string name="message_sml">Message</string>
+    <string name="entr_message_sml">Enter Message</string>
+
     <!--Profile-->
     <string name="mobile_sml">Mobile</string>
 
