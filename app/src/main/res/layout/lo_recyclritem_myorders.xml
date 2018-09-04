@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2018 Jalotsav
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5jdp"
+        android:layout_marginLeft="@dimen/_8jdp"
+        android:layout_marginRight="@dimen/_8jdp"
+        android:layout_marginTop="@dimen/_5jdp"
+        app:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120jdp">
+
+                <ImageView
+                    android:id="@+id/imgvw_recylrvw_item_myorders_packgimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/imgcd_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_carwash_byhand_2" />
+
+                <LinearLayout
+                    android:id="@+id/lnrlyot_recylrvw_item_myorders_packgbackgrnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/drwbl_gradiant_purple_trans"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_recylrvw_item_myorders_monthlywash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_light"
+                        android:paddingLeft="@dimen/_16jdp"
+                        android:paddingRight="@dimen/_16jdp"
+                        android:paddingTop="@dimen/_8jdp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12jdp"
+                        tools:text="@string/monthly_wash_val" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_recylrvw_item_myorders_packgname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_light"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_24jdp"
+                            tools:text="Silver" />
+
+                        <TextView
+                            android:id="@+id/tv_recylrvw_item_myorders_packgprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poiretone"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_18jdp"
+                            android:textStyle="bold"
+                            tools:text="@string/rupees_symbl_val" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_10jdp"
+                android:paddingLeft="@dimen/_16jdp"
+                android:paddingRight="@dimen/_16jdp"
+                android:paddingTop="@dimen/_10jdp">
+
+                <!--START Order No and Status-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/appcmptbtn_recylrvw_item_myorders_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_32jdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/colorPrimaryAmber"
+                        android:textSize="@dimen/_10jdp"
+                        tools:text="Pending" />
+
+                    <TextView
+                        android:id="@+id/tv_recylrvw_item_myorders_ordernumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/appcmptbtn_recylrvw_item_myorders_status"
+                        android:layout_toStartOf="@id/appcmptbtn_recylrvw_item_myorders_status"
+                        android:fontFamily="@font/poiretone"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/_18jdp"
+                        android:textStyle="bold"
+                        tools:text="@string/order_hashtag_val" />
+                </RelativeLayout>
+
+                <!--Order Booked Date-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/_16jdp"
+                        android:layout_height="@dimen/_16jdp"
+                        android:contentDescription="@string/imgcd_image"
+                        app:srcCompat="@drawable/ic_calendar" />
+
+                    <TextView
+                        android:id="@+id/tv_recylrvw_item_myorders_bookeddate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8jdp"
+                        android:layout_marginStart="@dimen/_8jdp"
+                        android:textSize="@dimen/_12jdp"
+                        tools:text="25 July 2017 00:00" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1jdp"
+                    android:layout_marginBottom="@dimen/_8jdp"
+                    android:layout_marginTop="@dimen/_8jdp"
+                    android:background="@color/grayLight" />
+
+                <!--Vehicle Name, Type-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/_16jdp"
+                        android:layout_height="@dimen/_16jdp"
+                        android:contentDescription="@string/imgcd_image"
+                        app:srcCompat="@drawable/ic_car_front_colorful" />
+
+                    <TextView
+                        android:id="@+id/tv_recylrvw_item_myorders_vehiclename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8jdp"
+                        android:layout_marginStart="@dimen/_8jdp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/_16jdp"
+                        tools:text="Swift VXI" />
+
+                    <TextView
+                        android:id="@+id/tv_recylrvw_item_myorders_vehicletype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8jdp"
+                        android:layout_marginStart="@dimen/_8jdp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimaryBlue"
+                        android:textSize="@dimen/_14jdp"
+                        tools:text="Sedan" />
+                </LinearLayout>
+
+                <!--Vehicle Number-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5jdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20jdp"
+                        android:layout_height="@dimen/_20jdp"
+                        android:contentDescription="@string/imgcd_image"
+                        app:srcCompat="@drawable/ic_license_plate" />
+
+                    <TextView
+                        android:id="@+id/tv_recylrvw_item_myorders_vehiclenumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8jdp"
+                        android:layout_marginStart="@dimen/_8jdp"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_14jdp"
+                        tools:text="GJ 27 XX 0000" />
+                </LinearLayout>
+
+                <!--Wash Time-->
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/appcmptbtn_recylrvw_item_myorders_washtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32jdp"
+                    android:layout_marginLeft="@dimen/_2jdp"
+                    android:layout_marginStart="@dimen/_2jdp"
+                    android:layout_marginTop="@dimen/_8jdp"
+                    android:background="@drawable/drwbl_rect_bg_grayea_round_corner"
+                    android:paddingLeft="@dimen/_16jdp"
+                    android:paddingRight="@dimen/_16jdp"
+                    android:textColor="@color/gray61"
+                    android:textSize="@dimen/_12jdp"
+                    tools:text="8:00 to 8:30 AM" />
+
+                <!--Location (Address Details)-->
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/appcmptbtn_recylrvw_item_myorders_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16jdp"
+                    android:background="@android:color/transparent"
+                    android:paddingLeft="@dimen/_8jdp"
+                    android:paddingRight="@dimen/_8jdp"
+                    android:text="@string/location_sml"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_14jdp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

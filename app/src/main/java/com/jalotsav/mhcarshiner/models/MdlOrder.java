@@ -27,6 +27,9 @@ public class MdlOrder {
 
     private String id, uId, userMobile, status, createdOn, createdBy, modifiedOn, modifiedBy;
     private int orderNumber;
+    private MdlCarWashPackages washPackagesDetails;
+    private MdlOrderVehicleDetails vehicleDetails;
+    private MdlOrderAddressDetails addressDetails;
 
     public MdlOrder() {
     }
@@ -81,5 +84,17 @@ public class MdlOrder {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public MdlCarWashPackages getWashPackagesDetails() {
+        return washPackagesDetails;
+    }
+
+    public MdlOrderVehicleDetails getVehicleDetails() {
+        return vehicleDetails;
+    }
+
+    public MdlOrderAddressDetails getAddressDetails() {
+        return addressDetails;
     }
 }

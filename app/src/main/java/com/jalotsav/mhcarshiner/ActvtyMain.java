@@ -26,7 +26,7 @@ import com.jalotsav.mhcarshiner.common.UserSessionManager;
 import com.jalotsav.mhcarshiner.nvgtnvwmain.FrgmntAboutUs;
 import com.jalotsav.mhcarshiner.nvgtnvwmain.FrgmntContactUs;
 import com.jalotsav.mhcarshiner.nvgtnvwmain.FrgmntHome;
-import com.jalotsav.mhcarshiner.nvgtnvwmain.FrgmntMyOrder;
+import com.jalotsav.mhcarshiner.nvgtnvwmain.FrgmntMyOrders;
 import com.jalotsav.mhcarshiner.nvgtnvwmain.FrgmntProfile;
 
 import butterknife.BindString;
@@ -122,7 +122,7 @@ public class ActvtyMain extends AppCompatActivity implements NavigationView.OnNa
                 return true;
             case R.id.action_nvgtndrwr_main_myorder:
 
-                fragment = new FrgmntMyOrder();
+                fragment = new FrgmntMyOrders();
                 mToolbar.setTitle(getString(R.string.myorders_sml));
                 loadFragment(fragment, item);
                 return true;
