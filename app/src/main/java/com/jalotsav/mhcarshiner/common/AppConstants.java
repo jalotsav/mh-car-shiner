@@ -41,6 +41,7 @@ public interface AppConstants {
     String CHILD_ADDRESS_DETAILS = "addressDetails";
     String CHILD_WASH_PACKAGES_DETAILS = "washPackagesDetails"; // used under ORDER child
     String CHILD_USER_MOBILE = "userMobile";
+    String CHILD_CONTACT_INQUIRY = "contactInquiry";
 
     // Order Status
     String ORDER_STATUS_PENDING = "Pending";
