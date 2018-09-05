@@ -134,10 +134,13 @@
 
     <!--Contact Us-->
     <string name="get_in_touch_sml">Get in touch!</string>
+    <string name="contact_email_sml">sachinmadgun@gmail.com</string>
+    <string name="contact_mobileno_sml">+91 8866804080</string>
     <string name="subject_sml">Subject</string>
     <string name="entr_subject_sml">Enter Subject</string>
     <string name="message_sml">Message</string>
     <string name="entr_message_sml">Enter Message</string>
+    <string name="sucsfly_contact_inquiry_sml">Our adviser will contact you soon</string>
 
     <!--Profile-->
     <string name="mobile_sml">Mobile</string>
